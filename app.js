@@ -1,4 +1,4 @@
-const path = require('path');,
+const path = require('path'),
       express = require('express'),
       bodyParser = require('body-parser'),
       cors = require('cors'),
