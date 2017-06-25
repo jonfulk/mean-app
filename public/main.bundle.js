@@ -702,13 +702,13 @@ var AuthService = (function () {
     AuthService.prototype.registerUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/users/register', user, { headers: headers })
+        return this.http.post('users/register', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/users/authenticate', user, { headers: headers })
+        return this.http.post('users/authenticate', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.getProfile = function () {
@@ -716,7 +716,7 @@ var AuthService = (function () {
         this.loadToken();
         headers.append('Content-Type', 'application/json');
         headers.append('Authorization', this.authToken);
-        return this.http.get('http://localhost:3000/users/profile', { headers: headers })
+        return this.http.get('users/profile', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.loadToken = function () {
