@@ -22,7 +22,7 @@ coverage/
 public/dist/
 uploads
 modules/users/client/img/profile/uploads
-config/
+config/database.js
 *.pem
 
 # Compiled less and sass files
